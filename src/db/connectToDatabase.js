@@ -2,15 +2,14 @@ require("dotenv").config();
 
 const mongoose = require("mongoose");
 
-const mongodbUsername = process.env.MongoDb_Username;
-const mongodbPassword = process.env.MongoDb_Password;
+// const mongodbUsername = process.env.MongoDb_Username;
+// const mongodbPassword = process.env.MongoDb_Password;
+const mongodbUri = process.env.MONGODB_URI;
 
-function connectToDatabase() {
+async function connectToDatabase() {
   try {
-    mongoose.connect(
-      `mongodb+srv://${mongodbUsername}:${mongodbPassword}@todo1.mxkldpe.mongodb.net/todosAppDb`
-    );
-
+    const mongodbUri = process.env.MONGODB_URI;
+    mongoose.connect(mongodbUri);
     const db = mongoose.connection;
 
     db.on("error", console.error.bind(console, "MongoDB connection error:"));
