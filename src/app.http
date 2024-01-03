@@ -1,5 +1,5 @@
 # singup / register a new user
-POST http://localhost:3001/users/signup
+POST http://localhost:5000/users/signup
 Content-Type: application/json
 
 {
@@ -10,12 +10,12 @@ Content-Type: application/json
 ###
 
 # Get all users from database :
-GET   http://localhost:3001/users/registered-users
+GET   http://localhost:5000/users/registered-users
 
 ###
 
 # user login 
-POST http://localhost:3001/users/login
+POST http://localhost:5000/users/login
 Content-Type: application/json
 
 {
@@ -27,7 +27,7 @@ Content-Type: application/json
 ###
 
 # add sample Todo Item (jwt is req): 
-POST http://localhost:3001/todos/add-todo
+POST http://localhost:5000/todos/add-todo
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyODYxMDUsImV4cCI6MTcwNDI4OTcwNX0.Td_7f-exrmpdQX4tA__V1qceuqiq4_J8FzQk3o72nBg
 
@@ -41,16 +41,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1M
 ###
 
 #get all todos
-GET http://localhost:3001/todos/get-all-todos
+GET http://localhost:5000/todos/get-all-todos
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyODYxMDUsImV4cCI6MTcwNDI4OTcwNX0.Td_7f-exrmpdQX4tA__V1qceuqiq4_J8FzQk3o72nBg
 
 ###
 #get todo by id :
-GET http://localhost:3001/todos/get-todo/6595144ec591ea7398ba5283
+GET http://localhost:5000/todos/get-todo/6595144ec591ea7398ba5283
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyODYxMDUsImV4cCI6MTcwNDI4OTcwNX0.Td_7f-exrmpdQX4tA__V1qceuqiq4_J8FzQk3o72nBg
 ###
 #Update a Todo by ID (PUT Request):
-PUT http://localhost:3001/todos/update-todo/65951475c591ea7398ba5285
+PUT http://localhost:5000/todos/update-todo/65951475c591ea7398ba5285
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyODYxMDUsImV4cCI6MTcwNDI4OTcwNX0.Td_7f-exrmpdQX4tA__V1qceuqiq4_J8FzQk3o72nBg
 
@@ -64,5 +64,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1M
 ###
 
 # Delete a todo by id by auth user
-DELETE http://localhost:3001/todos/delete-todo/65951475c591ea7398ba5285
+DELETE http://localhost:5000/todos/delete-todo/65951475c591ea7398ba5285
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyODYxMDUsImV4cCI6MTcwNDI4OTcwNX0.Td_7f-exrmpdQX4tA__V1qceuqiq4_J8FzQk3o72nBg
