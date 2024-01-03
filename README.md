@@ -18,7 +18,7 @@ This is a simple Todo Management API built with Node.js, Express, and MongoDB. T
 1. Clone the repository:
 
    ```bash
-   git clone <repo url>
+   git clone https://github.com/Balajikosuri/Todo-management-API/tree/master
    ```
 
 2. Install dependencies:
