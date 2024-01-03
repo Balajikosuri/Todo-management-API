@@ -50,7 +50,7 @@ GET http://localhost:3001/todos/get-todo/6595144ec591ea7398ba5283
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyODYxMDUsImV4cCI6MTcwNDI4OTcwNX0.Td_7f-exrmpdQX4tA__V1qceuqiq4_J8FzQk3o72nBg
 ###
 #Update a Todo by ID (PUT Request):
-PUT http://localhost:3001/todos/update-todo/6595144ec591ea7398ba5283
+PUT http://localhost:3001/todos/update-todo/65951475c591ea7398ba5285
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyODYxMDUsImV4cCI6MTcwNDI4OTcwNX0.Td_7f-exrmpdQX4tA__V1qceuqiq4_J8FzQk3o72nBg
 
@@ -58,10 +58,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1M
   "title": "Updated Todo",
   "description": "This todo has been updated",
   "due_date": "2023-12-31T23:59:59Z",
-  "priority": "medium"
+  "priority": "medium",
+  "completed":1
 }
 ###
 
 # Delete a todo by id by auth user
-DELETE http://localhost:3001/todos/delete-todo/6595144ec591ea7398ba5283
+DELETE http://localhost:3001/todos/delete-todo/65951475c591ea7398ba5285
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyODYxMDUsImV4cCI6MTcwNDI4OTcwNX0.Td_7f-exrmpdQX4tA__V1qceuqiq4_J8FzQk3o72nBg
