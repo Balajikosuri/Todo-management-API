@@ -1,0 +1,67 @@
+# singup / register a new user
+POST http://localhost:3001/users/signup
+Content-Type: application/json
+
+{
+  "username": "gopi kosuri",
+  "password": "gopi@2024"
+}
+
+###
+
+# Get all users from database :
+GET   http://localhost:3001/users/registered-users
+
+###
+
+# user login 
+POST http://localhost:3001/users/login
+Content-Type: application/json
+
+{
+  "username": "gopi kosuri",
+  "password": "gopi@2023"
+}
+
+
+###
+
+# add sample Todo Item (jwt is req): 
+POST http://localhost:3001/todos/add-todo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyODYxMDUsImV4cCI6MTcwNDI4OTcwNX0.Td_7f-exrmpdQX4tA__V1qceuqiq4_J8FzQk3o72nBg
+
+{
+  "title": "SAMPLE 3",
+  "description": "testing 3",
+
+  "priority": "high"
+}
+
+###
+
+#get all todos
+GET http://localhost:3001/todos/get-all-todos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyODYxMDUsImV4cCI6MTcwNDI4OTcwNX0.Td_7f-exrmpdQX4tA__V1qceuqiq4_J8FzQk3o72nBg
+
+###
+#get todo by id :
+GET http://localhost:3001/todos/get-todo/6595144ec591ea7398ba5283
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyODYxMDUsImV4cCI6MTcwNDI4OTcwNX0.Td_7f-exrmpdQX4tA__V1qceuqiq4_J8FzQk3o72nBg
+###
+#Update a Todo by ID (PUT Request):
+PUT http://localhost:3001/todos/update-todo/6595144ec591ea7398ba5283
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyODYxMDUsImV4cCI6MTcwNDI4OTcwNX0.Td_7f-exrmpdQX4tA__V1qceuqiq4_J8FzQk3o72nBg
+
+{
+  "title": "Updated Todo",
+  "description": "This todo has been updated",
+  "due_date": "2023-12-31T23:59:59Z",
+  "priority": "medium"
+}
+###
+
+# Delete a todo by id by auth user
+DELETE http://localhost:3001/todos/delete-todo/6595144ec591ea7398ba5283
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1MTNlN2M1OTFlYTczOThiYTUyN2IiLCJpYXQiOjE3MDQyODYxMDUsImV4cCI6MTcwNDI4OTcwNX0.Td_7f-exrmpdQX4tA__V1qceuqiq4_J8FzQk3o72nBg
