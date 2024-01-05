@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/userModel");
+const authenticateToken = require("../middlewares/authMiddleware");
 
 const router = express.Router();
 
@@ -18,7 +19,11 @@ router.post("/signup", async (req, res) => {
 
     const newUser = new User({ username, password });
     const savedUser = await newUser.save();
-    res.status(201).json(savedUser);
+    const successful_message = {
+      successful_message:
+        "Account created successfully! and Please login using your username & password",
+    };
+    res.status(201).json(successful_message);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -49,15 +54,6 @@ router.post("/login", async (req, res) => {
     });
 
     res.status(200).json({ jwt_token: token });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-// get All Users
-router.get("/registered-users", async (req, res) => {
-  try {
-    const users = await User.find();
-    res.status(200).json(users);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
