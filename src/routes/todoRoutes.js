@@ -18,7 +18,8 @@ router.post("/add-todo", authenticateToken, async (req, res) => {
       createdBy,
     });
     const savedTodo = await newTodo.save();
-    res.status(201).json(savedTodo);
+    const message = { message: "Your todo was saved successfully!" };
+    res.status(201).json(message);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
