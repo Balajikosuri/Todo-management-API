@@ -1,8 +1,9 @@
 const dotenv = require("dotenv")
+const cors = require('cors');
 const connectToDatabase = require("./db/connectToDatabase");
 const mongoose = require("mongoose");
 const express = require("express");
-
+app.use(cors());
 const userRoutes = require("./routes/userRoutes");
 const todoRoutes = require("./routes/todoRoutes");
 // for access .env variables 
